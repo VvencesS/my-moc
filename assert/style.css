@@ -117,13 +117,12 @@ a:focus {
 	text-align: center;
 	background: #009cd075;
     color: #232121e0;
-    padding: 0.75rem;
+    padding: 0.65rem;
     font-size: 0.85rem;
     position: relative;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     border-radius: 45px 45px 0px 45px;
     margin-top: 2px;
-    top: 40%;
 }
 
 .no-select {
@@ -135,7 +134,7 @@ a:focus {
 }
 
 .frame {
-	padding: 3rem 5vw;
+	padding: 6rem 5vw;
 	text-align: center;
 	position: relative;
 	z-index: 1000;
