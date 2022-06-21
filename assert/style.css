@@ -372,3 +372,39 @@ a:focus {
 		stroke-width: var(--cursor-stroke-width);
 	}
 }
+
+/* Custom avatar */
+#gb#gb a.gb_A {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+.gb_Ma .gb_A {
+    padding: 4px;
+}
+.gb_La.gb_f {
+    flex: 0 1 auto;
+}
+.gb_A {
+    display: inline-block;
+    outline: none;
+    vertical-align: middle;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+}
+.gb_Ud{
+	line-height: normal;
+}
+.gb_Ba {
+    background-size: 40px 40px;
+    border: 0;
+    border-radius: 50%;
+    display: block;
+    margin: 0px;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    z-index: 0;
+}
