@@ -634,31 +634,31 @@ a:focus {
       translate(-100px, -100px) rotate(-45deg);
   }
   25% {
-    -webkit-transform: translate(100px, 500px) rotate(90deg)
+    -webkit-transform: translate(900px, 400px) rotate(90deg)
       translate(-100px, -100px) rotate(-90deg);
   }
   38% {
-    -webkit-transform: translate(100px, 100px) rotate(135deg)
+    -webkit-transform: translate(100px, 200px) rotate(135deg)
       translate(-100px, -100px) rotate(0deg);
   }
   50% {
-    -webkit-transform: translate(100px, 100px) rotate(180deg)
+    -webkit-transform: translate(0px, 400px) rotate(180deg)
       translate(-100px, -100px) rotate(-180deg);
   }
   63% {
-    -webkit-transform: translate(1500px, 200px) rotate(225deg)
+    -webkit-transform: translate(500px, 100px) rotate(225deg)
       translate(-100px, -100px) rotate(225deg);
   }
   75% {
-    -webkit-transform: translate(100px, 100px) rotate(270deg)
+    -webkit-transform: translate(1000px, 10px) rotate(270deg)
       translate(-100px, -100px) rotate(-270deg);
   }
   88% {
-    -webkit-transform: translate(100px, 100px) rotate(315deg)
+    -webkit-transform: translate(600px, 300px) rotate(315deg)
       translate(-100px, -100px) rotate(315deg);
   }
   100% {
-    -webkit-transform: translate(1000px, 500px) rotate(360deg)
+    -webkit-transform: translate(1000px, 100px) rotate(360deg)
       translate(-100px, -100px) rotate(-360deg);
   }
 }
@@ -666,7 +666,7 @@ a:focus {
   height: 0px;
   width: 0px;
   border-radius: 25px;
-  -webkit-animation-duration: 4s;
+  -webkit-animation-duration: 12s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-name: "rotate";
   -webkit-animation-iteration-count: infinite;
