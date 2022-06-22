@@ -56,70 +56,45 @@
     <main>
       <canvas id="sakura"></canvas>
 
-      <div
-        style="
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-        "
-      >
-        <div
-          style="
-            width: 15%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-          "
-        >
-          <span style="padding: 0.65rem 0"> </span>
-          <span style="font-size: 2rem; padding: 0.9rem 0 0 0">
+      <div class="message-wrap">
+        <div class="message-avatar">
+          <span class="clear-padding"></span>
+          <span class="avatar-padding">
             <a
               class="gb_A gb_La gb_f"
-              aria-label="Google Account: Đức Soạn Trần (ducsoan99@gmail.com)"
-              href="https://accounts.google.com/SignOutOptions?hl=en&amp;continue=https://www.google.com%3Fhl%3Den-US"
+              aria-label="Anh Đức Soạn đáng yêu!! :b"
+              title="Anh Đức Soạn đáng yêu!! :b"
+              href="#"
               role="button"
               tabindex="0"
               target="_top"
               aria-expanded="false"
-              ><img
+            >
+              <img
+                id="avatar"
                 class="gb_Ba gbii"
                 src="https://lh3.googleusercontent.com/ogw/ADea4I7qSSpMsIGLQa7ky_oM6d1oxNaQE0OdFZFoTvVmjw=s32-c-mo"
                 srcset="
                   https://lh3.googleusercontent.com/ogw/ADea4I7qSSpMsIGLQa7ky_oM6d1oxNaQE0OdFZFoTvVmjw=s32-c-mo 1x,
                   https://lh3.googleusercontent.com/ogw/ADea4I7qSSpMsIGLQa7ky_oM6d1oxNaQE0OdFZFoTvVmjw=s64-c-mo 2x
                 "
-                alt=""
+                alt="Anh Đức Soạn đáng yêu!! :b"
                 aria-hidden="true"
                 data-noaft=""
-            /></a>
+              />
+            </a>
           </span>
+          <span class="clear-padding"></span>
         </div>
-        <div
-          style="
-            width: 85%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-          "
-        >
-          <span
-            style="
-              text-align: left;
-              padding-left: 0.85rem;
-              border-radius: 45px 45px 45px 0px;
-            "
-            class="message"
+        <div class="msg">
+          <span id="msg1" class="message visibility"
             >My ngố! Xem trên laptop để thấy hết vẻ đẹp nhé!</span
           >
-          <span
-            style="
-              text-align: left;
-              padding-left: 0.85rem;
-              border-radius: 0px 45px 45px 45px;
-            "
-            class="message"
-            >Dùng điện thoại có thể zoom ra/vào và click lên màn hình :vv</span
+          <span id="msg2" class="message visibility"
+            >Dùng điện thoại có thể zoom ra/vào và click lên màn hình</span
+          >
+          <span id="msg3" class="message visibility"
+            >Nói chung cứ test thử xem :vv</span
           >
         </div>
       </div>
@@ -236,6 +211,18 @@
     </svg>
     <script src="./assert/script.js"></script>
     <script type="text/javascript">
+      function animationMessage(div) {
+        div.style.visibility =
+          div.style.visibility === "visible" ? "hidden" : "visible";
+        div.style.opacity = div.style.opacity === 1 ? 0 : 1;
+      }
+
+      document.querySelector("#avatar").addEventListener("click", function () {
+        animationMessage(document.getElementById("msg1"));
+        animationMessage(document.getElementById("msg2"));
+        animationMessage(document.getElementById("msg3"));
+      });
+
       document
         .querySelector("span.content__title-sub")
         .addEventListener("mouseover", function () {
@@ -244,6 +231,7 @@
           document.querySelector("span#flower-2").innerHTML = "&#127802;";
           document.querySelector("span#man").innerHTML = "&#128586;";
         });
+
       document
         .querySelector("span.content__title-sub")
         .addEventListener("mouseout", function () {
