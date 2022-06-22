@@ -70,7 +70,7 @@
               target="_top"
               aria-expanded="false"
             >
-              <span class="icon-avatar">X</span>
+              <span class="icon-avatar">3</span>
               <img
                 id="avatar"
                 class="gb_Ba gbii"
@@ -82,6 +82,7 @@
                 alt="Anh Đức Soạn đáng yêu!! :b"
                 aria-hidden="true"
                 data-noaft=""
+                show-hidden="hidden"
               />
             </a>
           </span>
@@ -89,13 +90,13 @@
         </div>
         <div class="msg">
           <span id="msg1" class="message visibility"
-            >My ngố! Xem trên laptop để thấy hết vẻ đẹp nhé!</span
+            >My ngố! Xem trên laptop💻 để thấy hết vẻ đẹp nhé!</span
           >
           <span id="msg2" class="message visibility"
             >Dùng điện thoại có thể zoom ra/vào và click lên màn hình</span
           >
           <span id="msg3" class="message visibility"
-            >Nói chung cứ test thử xem :vv</span
+            >Nói chung cứ thử xem :vv</span
           >
         </div>
       </div>
@@ -216,14 +217,38 @@
         div.style.visibility =
           div.style.visibility === "visible" ? "hidden" : "visible";
         div.style.opacity = div.style.opacity === 1 ? 0 : 1;
-        document.querySelector("span.icon-avatar").innerHTML =
-          div.style.visibility === "visible" ? "X" : "3";
       }
 
       document.querySelector("#avatar").addEventListener("click", function () {
-        animationMessage(document.getElementById("msg1"));
-        animationMessage(document.getElementById("msg2"));
-        animationMessage(document.getElementById("msg3"));
+        let showHiddenAttr = document
+          .querySelector("#avatar")
+          .getAttribute("show-hidden");
+        if (showHiddenAttr === "hidden") {
+          document.querySelector("#avatar").setAttribute("show-hidden", "show");
+        } else {
+          document
+            .querySelector("#avatar")
+            .setAttribute("show-hidden", "hidden");
+        }
+        setTimeout(
+          function () {
+            animationMessage(document.getElementById("msg1"));
+          },
+          showHiddenAttr === "hidden" ? 500 : 1500
+        );
+        setTimeout(function () {
+          animationMessage(document.getElementById("msg2"));
+        }, 1000);
+        setTimeout(
+          function () {
+            animationMessage(document.getElementById("msg3"));
+          },
+          showHiddenAttr === "hidden" ? 1500 : 500
+        );
+        setTimeout(() => {
+          document.querySelector("span.icon-avatar").innerHTML =
+            showHiddenAttr === "show" ? "3" : "X";
+        }, 1500);
       });
 
       document

@@ -150,8 +150,8 @@ a:focus {
 }
 
 .visibility {
-  visibility: visible;
-  opacity: 1;
+  visibility: hidden;
+  opacity: 0;
   -webkit-transition: visibility 0.2s linear, opacity 0.2s linear;
   -moz-transition: visibility 0.2s linear, opacity 0.2s linear;
   -o-transition: visibility 0.2s linear, opacity 0.2s linear;
