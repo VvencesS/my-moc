@@ -445,7 +445,9 @@ a:focus {
 .gb_La.gb_f {
   flex: 0 1 auto;
 }
+
 .gb_A {
+  position: relative;
   display: inline-block;
   outline: none;
   vertical-align: middle;
@@ -467,4 +469,17 @@ a:focus {
   height: 40px;
   width: 40px;
   z-index: 0;
+}
+
+.icon-avatar{
+	position: absolute;
+    color: #fbf5f5;
+    z-index: 100;
+    font-weight: bold;
+    right: 0;
+    top: 0;
+    background: #eb1b1be8;
+    border-radius: 50%;
+    font-size: 3vw;
+    padding: 0 0.2rem;
 }
